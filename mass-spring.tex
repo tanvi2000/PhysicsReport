@@ -1,0 +1,353 @@
+\input{report_head.tex}
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Report head %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\preprint{Formal Report \#2: Experimental Physics, 33\,-104}
+\title{Free Oscillations of a Mass-Spring System:\\{\it Comparing observed periods to the theoretical projections}}
+\author{Tanvi Jakkampudi$*$\vspace{1mm}}
+% \email[\normalsize\sf]{TJAKKAMPUDI@ANDREW.CMU.EDU}
+\collaboration{Lab Partners: Nolan Mass, Anandita Nadkarni \vspace{2mm}}
+\affiliation{Department of Physics, Carnegie Mellon University}
+\date{June 20, 2019}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+% \normalsize
+We present the results of our experiment to measure the period of oscillations of various mass-spring systems and compare our findings to the theoretical predictions. The period of oscillation is given by equation of motion, which is governed by Newton's second law and Hooke's law, relates period as directly proportional to the square root of the mass over the spring constant. Our apparatus consisted of a glider attached to springs on an airtrack, which was used to reduce the effects of friction; our springs are assumed to obey Hooke's law. We computed the spring constant by measuring the displacement caused by masses due to gravitational force on them. This computed spring constant and the oscillator's mass were used to calculate the theoretical period. This predicted period was then compared to the experimental period measured using a photogate timer. Ultimately, our experimentally measured periods are in good agreement with our computed theoretical predictions.
+\end{abstract}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\subsection{Periodic motion and Hooke's law}
+Free motion of a mass-spring system repeats itself regularly and is called periodic motion. This cyclic motion occurs due to the restoring force of the spring. Hooke's law states that this restoring force is proportional to the displacement of the spring from its equilibrium position. Most springs obey Hooke's law, which is given by the equation:
+\begin{equation}
+    F = -kx \label{eq:1a1}
+\end{equation}
+The force constant $k$ is unique to each spring and it is a measure of spring's stiffness.
+
+\subsection{Equation of periodic motion}
+Newton's second law, as stated in Equation~\eqref{eq:1b1}, can be applied to the motion of the mass-spring system, where $m$ is the mass of the oscillator and $a$ is the acceleration. Acceleration $a$ of the oscillator is due to the restoring force of the spring.
+\begin{equation}
+    F = ma \label{eq:1b1}
+\end{equation}
+
+Using Hooke's Law, given by Equation~\eqref{eq:1a1}, and Newton's Second Law of Motion, given by Equation~\eqref{eq:1b1}, the equation of motion for harmonic oscillation can be derived as follows:
+\begin{align}
+    % F &= -kx && from~\eqref{eq:1a1} \nonumber\\
+    % F &= ma && from~\eqref{eq:1b1} \nonumber\\
+    % \therefore ma &= -kx \nonumber\\
+    % a &= -\dfrac{kx}{m} \nonumber\\
+    % \frac{d^2x}{dt^2} &= -\dfrac{kx}{m} \nonumber\\
+    \frac{d^2}{dt^2}\,x(t) + \frac{k}{m}\,x(t) &= 0 \label{eq:1b2}
+\end{align}
+Assuming that the oscillator is released from rest ($v_{i}=0$) at an initial displacement of $X_{0}$, yields a solution of oscillatory form. This solution to the second order differential equation~\eqref{eq:1b2} is given by:
+\begin{equation}
+    x(t) = X_{0}\cos{\Bigg(\frac{2\pi t}{T}\Bigg)} \label{eq:1b3}
+\end{equation}
+
+\subsection{Period of oscillation}
+One complete repetition of mass-spring's recurring motion is called an oscillation. The duration of each cycle is the period of oscillation. The period of oscillation depends on the spring's restoring force given by its force constant $k$ and mass $m$ of the oscillator. The period of oscillation $T$ can be derived by substituting the position function in the Equation~\eqref{eq:1b3} into Equation~\eqref{eq:1b2}. As a result, we get the following equation:
+\begin{align}
+% \frac{d^2}{dt^2}\,X_{0}\cos{\Bigg(\frac{2\pi t}{T}\Bigg)} &= - \dfrac{k}{m} X_{0}\cos{\Bigg(\dfrac{2\pi t}{T}\Bigg)} \nonumber\\
+% -\Bigg(\dfrac{2\pi}{T}\Bigg)^2X_{0}\cos{\Bigg(\dfrac{2\pi t}{T}\Bigg)} &= - \dfrac{k}{m} X_{0}\cos{\Bigg(\dfrac{2\pi t}{T}\Bigg)} \nonumber\\
+% \Bigg(\dfrac{2\pi}{T}\Bigg)^2 &= \dfrac{k}{m} \nonumber\\
+T &= 2\pi\sqrt{\dfrac{m}{k}} \label{eq:1b4}
+\end{align}
+
+This equation holds under the conditions that the springs used obey Hooke's Law and that the force of friction on the oscillator is negligible.
+
+\subsection{Purpose of the experiment}
+The purpose of this experiment is to experimentally measure the period of an oscillator with varied values of $k$ and $m$, and compare the experimental measurements to the theoretical periods yielded by Equation \eqref{eq:1b4}. 
+
+\section{Experimental Design}
+
+\begin{figure}[hbt]
+  \noindent
+  \centering
+  \input{draw0.tex}
+  \caption{\centering \label{fig:su0}Experimental design}
+\end{figure}
+
+\subsection{Apparatus}
+
+The apparatus for the experiment was setup two different ways: one to measure the period $T_{\textup ex}$ of oscillation and the other to measure the spring constant $k$ of the springs, which is needed to use Equation~\eqref{eq:1b4} to predict the theoretical period $T_{\textup th}$.
+
+The apparatus consisted of an air track, glider, springs, and a photogate timer. The air track was fashioned with a meter stick, so that the displacement of the oscillator could be measured. The air track was used to reduce the effects of friction on the oscillator. The springs used obey Hooke's Law, and the oscillator on the airtrack moved in periodic motion due to the restoring forces of the springs. The photogate timer's infrared sensor measured the period of oscillations. This setup is shown in Figure~\ref{fig:su0}.
+
+% In order to measure the value of $k$, the apparatus also included a pulley, a mass hangar, and silver masses. An electronic scale was used to weigh the masses. Additionally, a string was used to tie the hangar on one end, and to the oscillator on the other end. This string was placed over a pulley to redirect the gravitational force from vertical direction to the horizontal direction parallel to the springs' restoring force. This apparatus is shown in Figure~\ref{fig:su1}.
+
+\subsection{Mass-spring configuration}
+
+To verify the experimental results the experiment was repeated with various configurations of mass-spring systems; with each of these configurations multiple trials were repeated to further refine the observed data.
+
+The mass-spring combinations chosen to determine the spring constants were:
+\begin{enumerate*}[label=\textit{\roman*}), 
+       itemjoin={{; }},itemjoin*={{; and }}]
+    \item one mass with two springs
+    \item one mass with three springs
+    \item one mass with four springs.
+    % \item two added masses and four springs
+    % \item four added masses and four springs.
+\end{enumerate*}
+The variations of the system to measure the period of oscillations also included two more systems:
+\begin{enumerate*}[label=\textit{\roman*}), 
+       itemjoin={{; }},itemjoin*={{; and }}]
+       \setcounter{enumi}{3}
+    % \item one mass with two springs
+    % \item one mass with three springs
+    % \item one mass with four springs
+    \item two added masses and four springs
+    \item four added masses and four springs.
+\end{enumerate*}
+
+The variations of the mass-spring configurations and the number of trials are also detailed in the Table~(\ref{tab:table2}).
+
+
+\begin{table}[!htb]
+\begin{ruledtabular}
+\begin{tabular}{lcc}
+ \textbf{} & \textbf{\# of} & \textbf{Additional}\\
+ \textbf{System} & \textbf{Springs} & \textbf{Masses}\\
+\midrule
+\multicolumn{3}{l}{To measure the spring constants:} \\
+\midrule
+System (1) & 2 & 0 \\
+System (2) & 3 & 0\\
+System (3) & 4 & 0 \\
+\midrule
+\multicolumn{3}{l}{Additional systems to measure the period:} \\
+\midrule
+System (4) & 4 & 2\\
+System (5) & 4 & 4\\
+\end{tabular}
+\end{ruledtabular}
+\caption{\centering\label{tab:table2}Configuration of systems}
+\end{table}
+
+
+% new figure needed here and make sure to change the reference of the figures.
+
+%; a hangar and known masses were attached with a string to the glider, and the string was hung over a pulley as shown in the Figure~\ref{fig:su1}.
+
+% The apparatus to measure the period of the oscillator is shown in Figure~\ref{fig:su2}. Once again the apparatus consisted of the air track, glider, springs and an oscillator. Air track was equipped with a ruler to measure the displacement of the glider.
+
+\section{Procedure}%%%%%%%%%%%%%%% Procedure and apparatus %%%%%%%%%%%%%%%
+
+\subsection{Measuring the mass of the oscillator}
+
+First, the mass of the oscillator was measured to apply Equation~\eqref{eq:1b4} and compute the theoretical period $T_{\textup{th}}$. The oscillator consisted of a glider, the clips attaching the springs to the glider, any additional masses placed on top of the glider, and $\nicefrac{1}{3}$ mass of all the springs involved. The value of $\sigma_m$ was estimated to be 0.005g, based on the resolution of the electronic weighing scale used.
+
+\subsection{Measuring the spring constant}
+
+\begin{figure}[hbt]
+  \centering
+  \input{draw1.tex}
+  \caption{\centering \label{fig:su1}Measuring Spring constant}
+\end{figure}
+
+Thereafter, the effective spring constant was calculated, which is the second measurement needed to solve Equation~\eqref{eq:1b4}. The spring constant for each spring configuration can be found by equating Hooke's law~\eqref{eq:1a1} and Newton's second law of motion~\eqref{eq:1b1}. The local approximation for acceleration due to gravity ${\textup g}$ is assumed to be equal to $9.80118\, {\textup m}/{\textup s^2}$. As a result, the spring constant $k$ can be derived as follows:
+
+\begin{align}
+    % F_{net} = -kx &= mg = F_{net} \nonumber\\
+    k &= \dfrac{m{\textup g}}{x} \label{eq:2b1}
+\end{align}
+
+In order to measure the value of $k$, the apparatus also included a pulley, a mass hangar, and silver masses. An electronic scale was used to weigh the masses. Additionally, a string was used to tie the hangar on one end, and to the oscillator on the other end. This string was placed over a pulley to redirect the gravitational force from vertical direction to the horizontal direction parallel to the springs' restoring force. This apparatus is shown in Figure~\ref{fig:su1}.
+
+% \onecolumngrid
+\noindent
+\begin{figure*}[htb]
+    \begin{subfigure}[ht]{0.48\textwidth}
+    \centering
+    \caption{2 Springs: Displacement vs. Restoring force\label{fig:gra1}}
+    \input{k_graph1.tex}
+    \end{subfigure}\hfill
+    \begin{subfigure}[ht]{0.48\textwidth}
+    \centering
+    \caption{3 Springs: Displacement vs. Restoring force\label{fig:gra2}}
+    \input{k_graph2.tex}
+    \end{subfigure}
+    \begin{subfigure}[ht]{0.48\textwidth}
+    \centering
+    \caption{4 Springs: Displacement vs. Restoring force\label{fig:gra3}}
+    \input{k_graph3.tex}
+    \end{subfigure}
+    \caption{Scatter plots showing the displacement vs. the restoring force of the three spring systems.\\ The trendline indicates the $k$ values.}
+\end{figure*}
+
+\twocolumngrid
+
+A known mass, which was initially weighed using an electronic scale, was then hung over a pulley by a string. The string on the other end was attached to the oscillator. The force due to gravity acting on the mass is equivalent to $m{\textup g}$; this vertical force is redirected by the pulley to the horizontal direction parallel to the  springs' restoring force, causing a horizontal displacement of oscillator on the air track. After carefully reading the displacement from the meter stick on the air track, both the quantities of mass and displacement were recorded. These values of force and displacement were obtained over six trials, each time changing the quantity of mass resulting in distinct displacement.
+
+
+
+Based on the resolution of the measuring devices used, the uncertainities on the measured quantities of masses and displacements are estimated to be $\pm 0.0050$~g and $\pm 0.5$~mm, respectively.
+
+From Equation~\eqref{eq:2b1}, it is evident that by plotting the values of applied force $m{\textup g}$ against the displacement of the oscillator from its equilibrium position $x$, the force constant $k$ of the springs can be found as the slope of the line of best fit. This procedure was repeated for each of the spring configurations. Each time, the values of the force applied and displacement of the springs were recorded and plotted separately. Least square regression was then used to determine the linear relationship between the force and displacement variables.
+
+
+% Applying Equation~\eqref{eq:2b1} required masses to be of known quantity. So, a hangar with known masses were attached to the glider and the displacement, $x$, of oscillator from equilibrium position was measured. The value of $\sigma_x$ was estimated to be 0.5mm based on the resolution of the millimeter scale mounted on the airtrack.
+
+
+% This procedure of recording the force due to gravity and the displacement of the oscillator was repeated each time the spring configruration was changed. The value of $k$ and $\sigma_k$ was obtained by considering the distribution of data from repeated trials.
+
+\subsection{Measuring the oscillator period}
+
+The last measurement required was that of the period of oscillation for each of the mass-spring configurations. To achieve this, a photogate timer was used. Its infrared motion sensor measured the period of oscillations. The periods were measured and recorded for a total of ten trials and the mean was calculated for each of the configurations. The uncertainty on the period was determined from the data distribution. To minimize the error in measurement, the photogate timer was first calibrated by using a mechanical oscillator connected to a function generator.
+
+
+
+% \begin{figure}[hbt]
+%   \input{draw2.tex}
+%   \caption{\centering \label{fig:su2} Measuring period of oscillations}
+% \end{figure}
+
+% The mass of the oscillator was measured first, in order to apply Equation~\eqref{eq:1b4} and compute the theoretical period $T_{the}$. The oscillator consisted of the glider, the clips attaching the springs to the glider, any masses that were added to the glider, and $\frac{1}{3}$ of the spring mass. The value of $\sigma m$ was estimated to be 0.005g, based on the resolution of the electronic weighing scale used.
+
+
+% This was then compared to the theoretical period, calculated from Equation~\eqref{eq:1b4}. The value for $\sigma T$ was found using the error propagation equation, involving $k$, $\sigma k$, $m$, and $\sigma m$, as shown in Equation~\eqref{eq:3c1}.
+
+% \begin{equation}
+%     \sigma_T = \sqrt{\frac{\pi^2}{mk}}\sigma_m - \sqrt{\frac{\pi^2 m}{k^3}}\sigma_k \label{eq:3c1}
+% \end{equation}
+\input{wide_table.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and Discussion}
+
+% \subsection{Error Propagation}
+
+% \subsubsection{Mass}
+
+% Once again, the uncertainty on the mass was estimated to be $0.005$~g due to the resolution of the electronic scale used for the measurements.
+
+% \begin{equation}
+%     \sigma_m = 5 \times 10^{-3}\, \textup{g} \label{eq:4a1}
+% \end{equation}
+
+% \subsubsection{Spring Constant}
+
+% Error propagation on the $k$ value is computed by taking into consideration the uncertainity in the measurements of mass and displacement as follows:
+
+% \begin{equation}
+%     \sigma_k = \dfrac{\textup{g} \sigma_m}{x} - \dfrac{\textup{mg}\sigma_x}{x^2} \label{eq:4a2}
+% \end{equation}
+
+% \subsubsection{Theoretical Period}
+
+% The value for $\sigma_T$ was found using the error propagation equation, involving $k$, $\sigma k$, $m$, and $\sigma m$, as shown below:
+
+% \begin{equation}
+%     \sigma_{TT} = \sqrt{\frac{\pi^2}{mk}}\sigma_m - \sqrt{\frac{\pi^2 m}{k^3}}\sigma_k \label{eq:3c1}
+% \end{equation}
+
+% \subsubsection{Experimental Period}
+
+% Initially the experimental period measured by the photogate timer was corrected using the equation, $T_{calibrated} = 1.012404 \times T_{photogate}$, which was derived after calibrating the timer with the mechanical oscillator.
+
+% The uncertainty on the experimental period comes from evaluating the uncertainty on the mean of the ten values, recorded from the ten trials in each mass-spring configuration:
+
+% \begin{equation}
+%     \sigma_{TE} = \frac{\sigma_{10 trials}}{\sqrt{10}} \label{eq:4a4}
+% \end{equation}
+
+\subsection{Deriving the Spring Constant}
+
+
+
+The spring constant $k$ can be found by applying the Equation~\eqref{eq:2b1}. The measured force $F=mg$ and the displacement $x$ were plotted on graphs, which yield the values of $k$ as the slope of the line of best fit. The least-square regression method was used to find this line of best fit.
+
+
+
+% \noindent
+% \begin{figure}[tb]
+%     \centering
+%     \input{k_graph1.tex}
+%     \input{k_graph2.tex}
+%     % \input{k_graph3.tex}
+%     \caption{Scatter plots showing the force vs. the displacement of two, three and four spring systems. The slope of the trend line represents the $k$ value.}
+% \end{figure}
+
+The graphs above, Figures~\ref{fig:gra1}, \ref{fig:gra2}, \ref{fig:gra3} show the plotted data and the line of best fit for the two, three, and four spring configurations, respectively. The slopes of these lines represent the respective spring constants.
+
+
+
+From the linear least squares regression model, we calculated the $k$ values for the two, three, and four spring systems, as shown in Table~\ref{tab:table1}. The normalized Chi-Square values obtained from linear regression analysis for each of the data samples were found to be 0.119, 0.108, and 0.112. Since these $\nicefrac{\chi^2}{\nu}$ values are $\leq 1$, they support the hypothesis that the trend in data can be accurately represented by the model. Therefore, the assumption that the springs used obey Equation~\eqref{eq:1a1} is valid, so we can take the slope of these trend lines to be equal to the spring constants.
+
+
+\begin{figure}[hbt]
+  \input{draw2.tex}
+  \caption{\centering \label{fig:su2} Measuring period of oscillations}
+\end{figure}
+
+
+\subsection{Computing the Theoretical Period}
+
+Now, knowing the mass of the oscillator as well as the effective spring constant of the system, the theoretical periods for each of the mass-spring configurations can be computed using the Equation~\eqref{eq:1b4}.
+
+% \subsection{Measuring the Experimental Period}
+
+% The periods of oscillation were measured over ten trials for each mass-spring system, and the mean was calculated to minimize the error in measurement. While the experimental period was directly measured, the uncertainty was calculated as the uncertainty on the mean of the data.
+
+\subsection{Comparing Experimental \& Theoretical Periods}
+
+To compare the experimental and theoretical periods, the two values were plotted using a least-squares regression model. As is evident by the slope of the line of best fit in Figure~\ref{fig:gra4}, the correlation between the experimental period and the theoretical period is approximately equal to 1. This, along with the near-zero y-intercept of the trend-line, strongly indicates that the experimental period is in good agreement with the theoretical period, which was computed using Equation~\eqref{eq:1b4}.
+
+\noindent
+\begin{figure}[htb]
+    % \begin{subfigure}[ht]{0.48\textwidth}
+    \centering
+    \input{T_graph.tex}
+    \caption{Experimental Period vs. Theoretical Period\label{fig:gra4}}
+    % \end{subfigure}
+\end{figure}
+
+The $\nicefrac{\Delta}{\sigma}$ values in the last column of Table~\ref{tab:table1} also signify the level of agreement between the theoretical and experimental values of period for each of the five mass-spring configurations. Since all of the $\nicefrac{\Delta}{\sigma}$ values are less than 1, the experimentally determined period values are in good agreement with the respective theoretical predictions for every configuration.
+
+% While theoretical period for each configuration was found mathematically with Equation 3, and the experimental period was directly measured, the comparison of experimental and theoretical period can be found in Figure 6, where the slope of the best fit line indicates the level of agreement. For this comparison, ${\Delta}/{\sigma}$ was a value of 0.29, indicating good agreement between the experimental values of period and the theoretical predictions based on Equation 4.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Conclusion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+We accomplished our objective, which was to measure the period of the various mass-spring systems and compare them to the theoretical predictions. In order to do this, we first calculated the mass of the oscillator, then calculated the spring constant by doing an experiment recording the displacements due to various known forces on the mass-spring system. From the experimentally measured oscillator's mass and the overall effective spring constant, we could calculate a theoretical prediction for the period of the free harmonic motion.
+
+Finally. as shown in Table~\ref{tab:table1}, we compared our theoretical predictions of the period to the experimental values of the period, which we measured previously using a photogate timer. It is important to note that during this experiment, we made the following assumptions:
+\begin{enumerate*}[label=\textit{\roman*})\ ]
+    \item we assumed that the springs in the system obeyed Hooke's Law;
+    \item we also assumed that the frictional force acting on the mass over the air track was negligible.
+\end{enumerate*}
+
+In conclusion, we could assume that the period for simple harmonic motion, given by the Equation~\eqref{eq:1b4} holds for our experiment. 
+
+% The $\nicefrac{\Delta}{\sigma}$ values in the last column of Table~\ref{tab:table1} signify the level of agreement between the theoretical and experimental values of period for each of the five mass-spring configurations. Since all of the $\nicefrac{\Delta}{\sigma}$ values are less than 1, the experimentally determined period values are in good agreement with the respective theoretical predictions for every configuration.
+
+
+
+% \noindent
+% \begin{figure}[htb]
+%   \input{k_graph2.tex}
+%   \captionof{figure}{3 Springs: Displacement vs. Restoring force}
+%   \label{fig:gra2}
+% \end{figure}
+% \begin{figure}[htb]
+%   \input{k_graph3.tex}
+%   \captionof{figure}{4 Springs: Displacement vs. Restoring force}
+%   \label{fig:gra3}
+% \end{figure}
+
+\onecolumngrid
+\vspace{1cm}
+\hrule
+\vspace{0.5cm}
+\vfill
+{\hfill\noindent\rm\small $*$TJAKKAMP\,@\,ANDREW.CMU.EDU\hfill}
+% \appendix
+
+\end{document}

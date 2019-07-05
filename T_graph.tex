@@ -1,0 +1,31 @@
+\pgfplotstableread{
+X XE Y YE
+0.633492 0.0001873 0.6340554 0.0155938
+0.734398 0.0003743 0.7274900 0.0136434
+0.904188 0.0002016 0.9065743 0.0109917
+1.100048 0.0002713 1.1017838 0.0133585
+1.268036 0.0003947 1.2689217 0.0153849
+}\datatable
+\begin{tikzpicture}[]
+\begin{axis}[
+    axis equal,
+    grid=both,
+    minor tick num=1,
+    width=\linewidth,
+    title style={text width=3.5in},
+    % title=\bf Approximately one to one relationship between the Experimental \textit{vs}. the Theoretical Periods\vspace{2mm},
+    axis background/.style={fill=Wheat!10},
+    legend pos=south east,
+    xlabel={Experimental Period $T_{ex}$ (s)},
+    ylabel={Experimental Period $T_{th}$ (s)},
+    yticklabel pos=left]
+\addplot [only marks, mark=diamond*,Tomato, error bars/.cd, y dir=both, y explicit] table[x=X, y=Y, y error=YE] {\datatable};
+\addplot [thick, DodgerBlue] table[
+    y={create col/linear regression={y=Y}}
+] % compute a linear regression from the input table
+{\datatable};
+\addlegendentry{Period of oscillation}
+\addlegendentry{%
+$y = (\pgfmathprintnumber[precision=3]{\pgfplotstableregressiona})\,x\pgfmathprintnumber[fixed,precision=3]{\pgfplotstableregressionb}$}
+\end{axis}
+\end{tikzpicture}

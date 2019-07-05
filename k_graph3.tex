@@ -1,0 +1,32 @@
+\pgfplotstableread{
+X XE Y YE
+5 0.5 53.416431 0.0490059 
+10 0.5 102.520343 0.0490059
+15.0 0.5 151.918290 0.0490059
+20 0.5 201.022202 0.0490059
+25 0.5 250.714184 0.0490059
+29.5 0.5 299.818096 0.0490059
+}\datatable
+\begin{tikzpicture}[]
+\begin{axis}[
+    xmin=0, xmax=35,
+    grid=both,
+    minor tick num=1,
+    width=\linewidth,
+    title style={text width=3in},
+    % title={\textbf{Force Constant of 4 Springs system \vspace{2mm}}\\{Plot showing data points, displacement against restoring force, measured from six trials. The force constant $k$ is the slope of the trend line, $\pgfmathprintnumber[precision=3]{\pgfplotstableregressiona}$ }},
+    axis background/.style={fill=Wheat!10},
+    legend pos=south east,
+    xlabel={Displacement $\delta x$ (mm)},
+    ylabel={Force (mN)},
+    yticklabel pos=left]
+\addplot [only marks, mark=diamond*,Tomato, error bars/.cd, y dir=both, y explicit] table[x=X, y=Y, y error=YE] {\datatable};
+\addplot [thick, DodgerBlue] table[
+    y={create col/linear regression={y=Y}}
+] % compute a linear regression from the input table
+{\datatable};
+\addlegendentry{4 Springs}
+\addlegendentry{%
+$y = (\pgfmathprintnumber[precision=3]{\pgfplotstableregressiona})\,x+\pgfmathprintnumber[precision=3]{\pgfplotstableregressionb}$}
+\end{axis}
+\end{tikzpicture}

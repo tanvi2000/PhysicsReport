@@ -1,0 +1,49 @@
+\documentclass[svgnames,floatfix, preprintnumbers, balancelastpage, notitlepage, twocolumn, amsfonts, amsmath, oneside]{revtex4-1}
+
+\usepackage{tikz}
+% \usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{siunitx,units}
+\usepackage{bm}
+\usepackage[inline]{enumitem}
+\usepackage{pxfonts}
+\usepackage{graphicx}
+\usetikzlibrary{patterns, decorations, calc, snakes, backgrounds}
+\usepackage{pgfplots, pgfplotstable}
+\pgfplotsset{compat=1.15}
+\pgfplotsset{/pgfplots/error bars}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{multirow, makecell}
+\usepackage[textfont={it},labelfont={sf}]{caption}
+\usepackage{subcaption}
+\usepackage{relsize}
+\usepackage[english]{babel}
+% \renewcommand{\rmdefault}{lmodern}
+% \usepackage[lf]{mathpazo}
+\usepackage{lmodern}
+\usepackage[colorlinks=true]{hyperref}  % this package should be added after all the other packages
+
+\AtBeginDocument{
+\heavyrulewidth=.08em
+\lightrulewidth=.05em
+\cmidrulewidth=.03em
+\belowrulesep=.65ex
+\belowbottomsep=0pt
+\aboverulesep=.4ex
+\abovetopsep=0pt
+\cmidrulesep=\doublerulesep
+\cmidrulekern=.5em
+\defaultaddspace=.5em
+}
+
+\setlength{\columnseprule}{0.4pt}
+
+\renewcommand{\thesubsection}{\Roman{section}\,(\emph{\alph{subsection}})}
+
+\mathcode`*=\string"8000
+\begingroup
+\catcode`*=\active
+\xdef*{\noexpand\textup{\string*}}
+\endgroup
+
